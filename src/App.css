@@ -117,7 +117,7 @@
 .statsTopRow {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
 }
 
 .statsLabelGroup {
@@ -142,11 +142,13 @@
 .statsValue {
   font-size: 3.8rem;
   font-weight: 1000;
-  line-height: 0.8;
+  line-height: 0.9;
   letter-spacing: -2px;
   background: linear-gradient(180deg, #fff 30%, rgba(255, 255, 255, 0.4));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  position: relative;
+  z-index: 10;
 }
 
 .statsBottomRow {

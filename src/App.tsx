@@ -69,7 +69,7 @@ function App() {
             <h1 className="title">VocaJapones</h1>
             <Sparkles className="titleIcon" size={24} />
           </motion.div>
-          <p className="subtitle">Unlocking the Japanese Vibe • Neo-Zen Edition</p>
+          <p className="subtitle">Unlocking the Japanese Vibe</p>
         </div>
 
         <div className={`bentoTile statsTile`}>
