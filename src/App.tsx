@@ -73,22 +73,29 @@ function App() {
         </div>
 
         <div className={`bentoTile statsTile`}>
-          <div className="statsHeader">
-            <Library className="statsIcon" size={16} />
-            <span className="statsLabel">STASH</span>
-          </div>
-          <div className="statsMain">
+          <div className="statsTopRow">
+            <div className="statsLabelGroup">
+              <Library className="statsIcon" size={14} />
+              <span className="statsLabel">STASH</span>
+            </div>
             <span className="statsValue">{filteredVocab.length}</span>
-            <div className="statsFilters">
+          </div>
+          
+          <div className="statsBottomRow">
+            <div className="segmentedControl">
               {levels.map(lvl => (
                 <button 
                   key={lvl}
-                  className={`miniFilterBtn ${filter === lvl ? 'active' : ''}`}
+                  className={`segmentBtn ${filter === lvl ? 'active' : ''}`}
                   onClick={() => setFilter(lvl)}
                 >
                   {lvl}
                 </button>
               ))}
+              <div className="segmentHighlight" style={{ 
+                left: `${(levels.indexOf(filter) * 25)}%`,
+                width: '25%' 
+              }} />
             </div>
           </div>
         </div>
