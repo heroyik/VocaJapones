@@ -2,12 +2,12 @@ import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-  projectId: "vocajapones-app-77777",
-  appId: "1:588675203123:web:54a1996267a2d42acee346",
-  storageBucket: "vocajapones-app-77777.firebasestorage.app",
-  apiKey: "AIzaSyAdXlAJZ24Y1o9d1wp6__ZZrtko2mjrD1g",
-  authDomain: "vocajapones-app-77777.firebaseapp.com",
-  messagingSenderId: "588675203123"
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID
 };
 
 const app = initializeApp(firebaseConfig);

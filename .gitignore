@@ -30,3 +30,6 @@ venv
 
 # Firebase
 .firebase
+
+# Environment
+.env
