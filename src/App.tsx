@@ -73,28 +73,27 @@ function App() {
         </div>
 
         <div className={`bentoTile statsTile`}>
-          <Library className="statsIcon" size={20} />
-          <span className="statsLabel">STASH</span>
-          <span className="statsValue">{vocab.length}</span>
+          <div className="statsHeader">
+            <Library className="statsIcon" size={16} />
+            <span className="statsLabel">STASH</span>
+          </div>
+          <div className="statsMain">
+            <span className="statsValue">{filteredVocab.length}</span>
+            <div className="statsFilters">
+              {levels.map(lvl => (
+                <button 
+                  key={lvl}
+                  className={`miniFilterBtn ${filter === lvl ? 'active' : ''}`}
+                  onClick={() => setFilter(lvl)}
+                >
+                  {lvl}
+                </button>
+              ))}
+            </div>
+          </div>
         </div>
       </motion.header>
 
-      <motion.div 
-        className="filters"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.5 }}
-      >
-        {levels.map(lvl => (
-          <button 
-            key={lvl}
-            className={`filterBtn ${filter === lvl ? 'active' : ''}`}
-            onClick={() => setFilter(lvl)}
-          >
-            {lvl}
-          </button>
-        ))}
-      </motion.div>
 
       <main>
         {loading ? (

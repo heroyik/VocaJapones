@@ -104,71 +104,87 @@
   letter-spacing: 1px;
 }
 
-/* Stats Tile */
+/* Stats Tile (Consolidated Hub) */
 .statsTile {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid rgba(0, 242, 245, 0.1);
+  background: radial-gradient(circle at 100% 100%, rgba(0, 242, 255, 0.05), transparent);
+  padding: 1.5rem 2rem;
+}
+
+.statsHeader {
+  display: flex;
   align-items: center;
-  justify-content: center;
-  border: 1px solid rgba(0, 242, 255, 0.1);
-  background: radial-gradient(circle at 50% 50%, rgba(0, 242, 255, 0.05), transparent);
+  gap: 0.5rem;
 }
 
 .statsIcon {
   color: var(--accent-cyan);
-  margin-bottom: 0.5rem;
   opacity: 0.8;
 }
 
 .statsLabel {
-  font-size: 0.65rem;
+  font-size: 0.6rem;
   text-transform: uppercase;
-  letter-spacing: 3px;
+  letter-spacing: 2px;
   color: var(--text-secondary);
-  font-weight: 700;
+  font-weight: 800;
+}
+
+.statsMain {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-top: 1rem;
 }
 
 .statsValue {
-  font-size: 3rem;
+  font-size: 3.5rem;
   font-weight: 900;
-  background: linear-gradient(to bottom, #fff, #888);
+  line-height: 1;
+  background: linear-gradient(to bottom, #fff, #aaa);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.filters {
-  display: flex;
-  gap: 1rem;
-  margin-bottom: 2.5rem;
-  padding: 0.5rem;
-  overflow-x: auto;
-  scrollbar-width: none;
+.statsFilters {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.4rem;
 }
 
-.filterBtn {
-  background: var(--bg-surface);
-  border: 1px solid rgba(255, 255, 255, 0.03);
-  color: #fff;
-  padding: 0.7rem 2.22rem;
-  border-radius: 20px;
-  font-weight: 500;
+.miniFilterBtn {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  color: var(--text-secondary);
+  padding: 0.4rem 0.8rem;
+  border-radius: 10px;
+  font-size: 0.7rem;
+  font-weight: 700;
   cursor: pointer;
-  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-  white-space: nowrap;
-  letter-spacing: 1px;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  min-width: 50px;
 }
 
-.filterBtn.active {
+.miniFilterBtn:hover {
+  border-color: var(--accent-cyan);
+  color: #fff;
+}
+
+.miniFilterBtn.active {
   background: #fff;
   color: #000;
-  transform: scale(1.05);
-  box-shadow: 0 10px 30px rgba(255,255,255,0.1);
+  border-color: #fff;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
 }
 
 .cardGrid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
-  gap: 2rem;
+  gap: 2.5rem;
+  margin-top: 1rem;
 }
 
 .loading {
