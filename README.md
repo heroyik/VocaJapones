@@ -1,8 +1,8 @@
-# 🛸 VocaJapones
+# 🏯 VocaJapones: Neo-Zen Cyber Edition
 
-> **Premium Japanese Expression Learning Experience for OPiC Success**
+A premium, dynamic Japanese vocabulary mastering application. Built with React, Vite, and Firebase, featuring a state-of-the-art Japanese aesthetic.
 
-VocaJapones is a state-of-the-art web application designed to help Korean learners master high-level Japanese expressions. Built with a focus on **Visual Excellence** and **Interactive Learning**, it provides a curated set of OPiC-aligned materials with a premium, mobile-first interface.
+[![Deploy to GitHub Pages](https://github.com/heroyik/VocaJapones/actions/workflows/deploy.yml/badge.svg)](https://heroyik.github.io/VocaJapones/)
 
 ---
 
