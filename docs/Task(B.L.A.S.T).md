@@ -1,0 +1,27 @@
+# Task: VocaJapones Project Implementation (B.L.A.S.T. Protocol)
+
+- [x] **Phase 0: Initialization**
+  - [x] Discovery Questions Answered
+  - [x] Initialize Project Memory Files ([gemini.md](file:///Users/ikyoon/proj/VocaJapones/gemini.md), [task_plan.md](file:///Users/ikyoon/proj/VocaJapones/task_plan.md), [findings.md](file:///Users/ikyoon/proj/VocaJapones/findings.md), [progress.md](file:///Users/ikyoon/proj/VocaJapones/progress.md))
+  - [x] Analyze `holavoca` UI/UX Patterns
+- [x] **Phase 1: Blueprint**
+  - [x] Define JSON Data Schema in [gemini.md](file:///Users/ikyoon/proj/VocaJapones/gemini.md)
+  - [x] Research Japanese Vocab extraction patterns
+  - [x] Verify extraction logic with `260208~ 일본어.md` (Clean Data rule applied)
+  - [x] Approve [task_plan.md](file:///Users/ikyoon/proj/VocaJapones/task_plan.md) Blueprint
+- [x] **Phase 2: Link**
+  - [x] Create Firebase project `vocajapones-app-77777`
+  - [x] Initialize Firestore and venv
+  - [x] Upload [initial_voca.json](file:///Users/ikyoon/proj/VocaJapones/initial_voca.json) to Firestore
+  - [x] Verify Firestore connectivity and data
+- [x] **Phase 3: Architect**
+  - [x] Initialize Vite/React/TS project
+  - [x] Configure Firestore Web SDK
+  - [x] Implement Premium UI/UX (WordCard, App, Filtering)
+- [/] **Phase 4: Ship**
+  - [/] Verification on local dev server
+  - [ ] Final UX Audit (Device compatibility check)
+  - [ ] Deploy to Firebase Hosting
+- [ ] **Phase 5: Trigger**
+  - [ ] Deploy to Google Cloud
+  - [ ] Setup maintenance logs
