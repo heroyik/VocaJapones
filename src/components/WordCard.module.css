@@ -1,19 +1,17 @@
 .cardContainer {
-  perspective: 1200px;
-  width: 100%;
-  height: 280px;
+  perspective: 1500px;
   cursor: pointer;
 }
 
 .cardInner {
   position: relative;
   width: 100%;
-  height: 100%;
-  transition: transform 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+  height: 380px; /* Taller for more dynamic content */
   transform-style: preserve-3d;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.cardInner.flipped {
+.flipped {
   transform: rotateY(180deg);
 }
 
@@ -21,21 +19,37 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
+  border-radius: 28px;
   display: flex;
   flex-direction: column;
-  border-radius: 28px;
-  padding: 2rem;
+  padding: 2.5rem;
+  box-sizing: border-box;
   background: var(--bg-bento);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  overflow: hidden;
+}
+
+/* Traditional Japanese Stamp Decor */
+.cardFront::before {
+  content: "合格"; /* PASS */
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  font-size: 0.7rem;
+  color: var(--accent-sakura);
+  opacity: 0.2;
+  border: 1px solid var(--accent-sakura);
+  padding: 0.2rem 0.4rem;
+  transform: rotate(15deg);
+  font-weight: 900;
+  border-radius: 4px;
 }
 
 .cardFront {
   justify-content: center;
   align-items: center;
-  overflow: hidden;
 }
 
 .cardFront::after {
@@ -53,7 +67,7 @@
   transform: rotateY(180deg);
   justify-content: flex-start;
   text-align: left;
-  background: var(--bg-surface);
+  background: radial-gradient(circle at 100% 0%, rgba(0, 242, 255, 0.05), transparent);
   overflow-y: auto;
   border: 1px solid rgba(189, 0, 255, 0.2);
 }
@@ -65,15 +79,13 @@
 
 .level {
   position: absolute;
-  top: 1.5rem;
-  right: 1.5rem;
+  top: 2rem;
+  left: 2rem;
   font-size: 0.7rem;
-  font-weight: 700;
+  font-weight: 800;
+  letter-spacing: 2px;
   color: var(--accent-cyan);
-  background: rgba(0, 245, 255, 0.1);
-  padding: 0.3rem 0.8rem;
-  border-radius: 8px;
-  letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
 .japones {
