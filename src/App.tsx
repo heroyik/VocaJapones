@@ -4,7 +4,7 @@ import { db } from './firebase'
 import { collection, getDocs } from 'firebase/firestore'
 import WordCard from './components/WordCard'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Sparkles, Library } from 'lucide-react'
+import { Sparkles, Library, Github } from 'lucide-react'
 import './App.css'
 
 interface VocabItem {
@@ -137,6 +137,18 @@ function App() {
           </motion.div>
         )}
       </main>
+
+      <footer className="appFooter">
+        <p className="footerCopyright">
+          ©2026 VIVA LINGUISTICA
+          <a href="https://github.com/heroyik/VocaJapones" target="_blank" rel="noopener noreferrer" className="githubLink">
+            <Github size={14} />
+          </a>
+        </p>
+        <p className="footerCrafted">
+          Crafted by google antigravity and chatgpt
+        </p>
+      </footer>
     </div>
   )
 }

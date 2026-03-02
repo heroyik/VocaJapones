@@ -213,6 +213,50 @@
   letter-spacing: 3px;
 }
 
+/* App Footer */
+.appFooter {
+  margin-top: 4rem;
+  padding: 2rem 0;
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.footerCopyright {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.githubLink {
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease;
+  opacity: 0.7;
+}
+
+.githubLink:hover {
+  color: var(--accent-cyan);
+  opacity: 1;
+  transform: translateY(-2px);
+}
+
+.footerCrafted {
+  font-size: 0.65rem;
+  color: rgba(255, 255, 255, 0.3);
+  letter-spacing: 1px;
+  font-weight: 300;
+}
+
+
 @media (max-width: 1024px) {
   .sideBanner { display: none; }
 }
